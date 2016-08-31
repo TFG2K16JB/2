@@ -1,0 +1,58 @@
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 4,
+    "max_score" : 1.0,
+    "hits" : [ {
+      "_index" : "agenda",
+      "_type" : "amigo",
+      "_id" : "4",
+      "_score" : 1.0,
+      "_source":
+{
+"nombre": "Sandra",
+"apellido": "Bermejo",
+"edad": 17
+}
+    }, {
+      "_index" : "agenda",
+      "_type" : "amigo",
+      "_id" : "1",
+      "_score" : 1.0,
+      "_source":
+{
+"nombre": "Alejando",
+"apellido": "Perez",
+"edad": 19
+}
+    }, {
+      "_index" : "agenda",
+      "_type" : "amigo",
+      "_id" : "2",
+      "_score" : 1.0,
+      "_source":
+{
+"nombre": "Fran",
+"apellido": "Sanchez",
+"edad": 28
+}
+    }, {
+      "_index" : "agenda",
+      "_type" : "amigo",
+      "_id" : "3",
+      "_score" : 1.0,
+      "_source":
+{
+"nombre": "Pepe",
+"apellido": "Bermejo",
+"edad": 24
+}
+    } ]
+  }
+}

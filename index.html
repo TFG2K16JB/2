@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="agenda">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+
+  <body ng-controller="ElasticController as data">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">My First App </h1>
+      <h3 class="text-center">– AngularJS and Elasticsearch –</h3>
+    </header>
+      
+    <!-- Show the contacts -->
+    <h2>Lista de contactos de la agenda:</h2>
+    {{data.contacts}}
+    <!--  Products Container  -->
+    <div class="list-group">
+      <!--  Product Container  -->
+        <div class="list-group-item" ng-repeat="contact in data.contacts">
+            <h3>{{contact}} <em class="pull-right"></em></h3>
+        </div>
+    </div>
+      
+      
+      
+    <!-- Add new contact -->
+    <h2>Añadir un nuevo contacto a la agenda</h2>
+      
+    <div ng-controller='MyController as data2'>
+        <form novalidate class="simple-form">
+            Nombre: <input type="text" ng-model="data2.nombre"/></br>
+            Apellido: <input type="text" ng-model="data2.apellido" /></br>
+            Edad: <input type="number" ng-model="data2.edad" /></br>
+            <input type="submit" ng-click="update()" value="Guardar" />
+        </form>
+        {{data2}}
+    </div>
+    
+  </body>
+</html>
